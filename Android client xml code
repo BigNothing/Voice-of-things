@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your message here:" />
+
+    - <EditText
+    android:id="@+id/etMsg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10">
+
+    <requestFocus />
+
+</EditText>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status..."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/bSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversation:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvConvo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+</LinearLayout>-->
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/topModule">
+
+        <TextView
+
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status..."
+            android:textSize="26dp"
+            android:textIsSelectable="false"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:textAlignment="center"
+            android:textColor="#00ff00"/>
+
+        <TextView
+            android:id="@+id/tvText"
+            android:textSize="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Type your message here:"
+            android:textColor="@color/bg_gradient_start"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"/>
+
+        - <EditText
+
+            android:id="@+id/etMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="@color/white"
+            android:layout_weight="1">
+
+           <requestFocus /> </EditText>
+
+
+
+        <Button
+            android:id="@+id/bSend"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Send Message"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="#66ffff"
+            android:textSize="15dp"
+            android:background="@color/button_background"
+            android:textStyle="italic"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Raspberry response:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvConvo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Testing voice service"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/bg_gradient_end" />
+
+    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/txtSpeechInput"
+        android:layout_below="@id/topModule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Say something"
+        android:textSize="26dp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:id="@+id/mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/micro999" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/tap_on_mic"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+        <Button
+            android:id="@+id/bSend2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Send Voice"
+            android:textColor="#66ffff"
+            android:textSize="15dp"
+            android:background="@color/button_background"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/toSpeech"
+        android:layout_marginTop="350dp"
+        android:text="speak"
+        android:layout_toRightOf="@id/mic"
+        android:textColor="#66ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/button_background" />
+
+</RelativeLayout>
+
